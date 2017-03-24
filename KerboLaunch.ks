@@ -8,6 +8,7 @@ clearscreen.
 
 LOCK throttle to 1.0.
 LOCK steering to up.
+LOCK SAS to on.
 
 Print "Checking Ship Status".
 PRINT "There is " + SHIP:LIQUIDFUEL + " Liquid Fuel on the ship.".
@@ -30,9 +31,11 @@ FROM {local countdown is 10.} UNTIL countdown = 0 STEP {SET countdown to countdo
 UNTIL SHIP:MAXTHRUST > 0 {
     WAIT 0.5. // pause half a second between stage attempts.
     if ship:LIQUIDFUEL < 0.1 {
-      PRINT "Stage activated.".
+      PRINT "Starting" + Stage.
       STAGE.
     }
 }
 
 WAIT UNTIL SHIP:ALTITUDE > 30000.
+LOCK THROTTLE TO 0.
+WAIT UNTIL FALSE.
