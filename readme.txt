@@ -14,3 +14,7 @@
 
 ## KerbalOS Documentation
 https://ksp-kos.github.io/KOS/language/
+
+## My Tools
+- Using the Atom text editor. https://atom.io/
+  - It supports Kerboscript syntax. https://atom.io/packages/language-kerboscript
